@@ -12,13 +12,10 @@ global.owner = [
   ['5217294888993'],['573106040746'],['51929972576'],['51992004117'],['5214432220783'],['50558124470'],
 ];
 
-global.suittag = ['5214437863111']
 global.prems = ['51992004127']
 global.packname = '☯︎ 𝙱𝙾𝚃\n☯︎ 𝙾𝚆𝙽𝙴𝚁';
 global.author = 'ʜᴀᴄʜɪᴋᴏ-ʙᴏᴛ-ᴍᴅ\nʜᴀᴄʜᴇᴊᴏᴛᴀ';
-global.wm = '𝙷𝙰𝙲𝙷𝙸𝙺𝙾-𝙱𝙾𝚃-𝙼𝙳';
 global.titulowm = ' ᕼᗩᑕᕼIKO-ᗷOT-ᗰᗪ';
-global.titulowm2 = `乂  𝐇 𝐀 𝐂 𝐇 𝐈 𝐊 𝐎 - 𝐁 𝐎 𝐓 - 𝐌 𝐃 乂`
 global.wait = '*[❗] 𝙲𝙰𝚁𝙶𝙰𝙽𝙳𝙾 𝚂𝙴𝙰 𝙿𝙰𝙲𝙸𝙴𝙽𝚃𝙴...*';
 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
@@ -40,10 +37,8 @@ global.año = d.toLocaleDateString('es', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 
 //****************************
-global.gp1 = 'https://chat.whatsapp.com/LRQdtS7nKt89NBUPWJDjzh'
 global.gp2 = 'https://chat.whatsapp.com/BcCSqRpWctb0J4cNZb02Te'
 global.wm2 = `▸ ${dia} ${fecha}\n▸ 𝙷𝚊𝚌𝚑𝚒𝚔𝚘-𝙱𝚘𝚝`;
-global.md = 'https://www.instagram.com/hachejota16';
 global.waitt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*';
 global.waittt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*';
 global.waitttt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*';
