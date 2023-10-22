@@ -6,37 +6,6 @@ import cheerio from 'cheerio';
 import fetch from 'node-fetch';
 import axios from 'axios';
 import moment from 'moment-timezone';
-var handler = m => m
-handler.all = async function (m) {
-
-global.getBuffer = async function getBuffer(url, options) {
-try {
-options ? options : {}
-var res = await axios({
-method: "get",
-url,
-headers: {
-'DNT': 1,
-'User-Agent': 'GoogleBot',
-'Upgrade-Insecure-Request': 1
-},
-...options,
-responseType: 'arraybuffer'
-})
-return res.data
-} catch (e) {
-console.log(`Error : ${e}`)
-}}
-	
-let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? this.user.jid : m.sender
-let pp = await this.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/489a1001e8f72a826054e.jpg')
-	
-/* 
-Mensajes Fakes
-*/
-
-global.n2 = { contextInfo: { externalAdReply: { mediaUrl: md, mediaType: 'VIDEO', description: '𝙷𝙰𝙲𝙷𝙸𝙺𝙾𝙱𝙾𝚃-𝙼𝙳', title: packname, body: 'Grupos ofc', thumbnailUrl: pp, sourceUrl: md }}}
-  
 
 global.fgclink = { key: { fromMe: false, participant: "0@s.whatsapp.net", remoteJid: "0@s.whatsapp.net" }, message: { groupInviteMessage: { groupJid: "6285736178354-1625305606@g.us", inviteCode: null, groupName:`${hb}`, caption: hb, jpegThumbnail: imagen4}}}
 
@@ -88,13 +57,13 @@ global.twa = {key: {participant: "0@s.whatsapp.net", remoteJid: "0@s.whatsapp.ne
 
 global.fakemek = {key: {participant: "0@s.whatsapp.net",remoteJid: "0@s.whatsapp.net"}, message: {groupInviteMessage: {groupJid: "51995386439-1616969743@g.us", inviteCode: "m",groupName: "P", caption: 'CuriosityBot-MD', jpegThumbnail: null}}}
 //******* 🅒︎🅡︎🅔︎🅓︎🅘︎🅣︎🅞︎🅢︎ *****/
-global.hachejota = '𝙷𝙰𝙲𝙷𝙴𝙹𝙾𝚃𝙰';
-global.hb = 'HΔCHIҜΩβΩT-MD';
+global.hachejota = '𝙷𝙰𝙲𝙷𝙴𝙹𝙾𝚃𝙰'
+global.hb = 'HΔCHIҜΩβΩT-MD'
 global.wm = '𝙷𝙰𝙲𝙷𝙸𝙺𝙾-𝙱𝙾𝚃-𝙼𝙳';
-global.titulowm2 = '乂  𝐇 𝐀 𝐂 𝐇 𝐈 𝐊 𝐎 - 𝐁 𝐎 𝐓 - 𝐌 𝐃 乂';
-global.gp1 = 'https://chat.whatsapp.com/LRQdtS7nKt89NBUPWJDjzh';
-global.md = 'https://www.instagram.com/hachejota16';
-global.suittag = ['5214437863111'];
+global.titulowm2 = `乂  𝐇 𝐀 𝐂 𝐇 𝐈 𝐊 𝐎 - 𝐁 𝐎 𝐓 - 𝐌 𝐃 乂`
+global.gp1 = 'https://chat.whatsapp.com/LRQdtS7nKt89NBUPWJDjzh'
+global.md = 'https://www.instagram.com/hachejota16'
+global.suittag = ['5214437863111']
 //************************************************/
 var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 0: hour = 'una linda noche 🌙'; break; case 1: hour = 'una linda noche 💤'; break; case 2: hour = 'una linda noche 🦉'; break; case 3: hour = 'una linda mañana ✨'; break; case 4: hour = 'una linda mañana 💫'; break; case 5: hour = 'una linda mañana 🌅'; break; case 6: hour = 'una linda mañana 🌄'; break; case 7: hour = 'una linda mañana 🌅'; break; case 8: hour = 'una linda mañana 💫'; break; case 9: hour = 'una linda mañana ✨'; break; case 10: hour = 'un lindo dia 🌞'; break; case 11: hour = 'un lindo dia 🌨'; break; case 12: hour = 'un lindo dia ❄'; break; case 13: hour = 'un lindo dia 🌤'; break; case 14: hour = 'una linda tarde 🌇'; break; case 15: hour = 'una linda tarde 🏜️'; break; case 16: hour = 'una linda tarde ☀️'; break; case 17: hour = 'una linda tarde 🌆'; break; case 18: hour = 'una linda noche 🌙'; break; case 19: hour = 'una linda noche 🌃'; break; case 20: hour = 'una linda noche 🌌'; break; case 21: hour = 'una linda noche 🌃'; break; case 22: hour = 'una linda noche 🌙'; break; case 23: hour = 'una linda noche 🌃'; break;}
 global.saludo = "Espero que tengas " + hour;
@@ -110,6 +79,10 @@ global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', s
 global.nombre = conn.getName(m.sender)
 global.taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 
-}
-
-export default handler
+//* ************************
+let file = fileURLToPath(import.meta.url);
+watchFile(file, () => {
+  unwatchFile(file);
+  console.log(chalk.redBright('Update \'config.js\''));
+  import(`${file}?update=${Date.now()}`);
+});
