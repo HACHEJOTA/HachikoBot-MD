@@ -1,10 +1,11 @@
-import pkg from '@whiskeysockets/baileys'
-import fs from 'fs'
-import fetch from 'node-fetch'
-import axios from 'axios'
-import moment from 'moment-timezone'
-const { generateWAMessageFromContent, prepareWAMessageMedia, proto } = pkg
-
+import {watchFile, unwatchFile} from 'fs';
+import chalk from 'chalk';
+import {fileURLToPath} from 'url';
+import fs from 'fs'; 
+import cheerio from 'cheerio';
+import fetch from 'node-fetch';
+import axios from 'axios';
+import moment from 'moment-timezone';
 var handler = m => m
 handler.all = async function (m) {
 
