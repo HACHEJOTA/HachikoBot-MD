@@ -22,14 +22,14 @@ let te = `𝆺𝅥𝅮 🔥 *𝙽𝙾𝙼𝙱𝚁𝙴:* ${p.nickname}
  𝆺𝅥𝅮 👤 *𝚄𝚂𝚄𝙰𝚁𝙸𝙾:* ${p.unique_id}
 𝆺𝅥𝅮 ⏰ *𝙳𝚄𝚁𝙰𝙲𝙸𝙾𝙽:* ${p.duration}
 𝆺𝅥𝅮 📄 *𝙳𝙴𝚂𝙲𝚁𝙸𝙲𝙸𝙾𝙽:* ${p.description}`
-conn.sendFile(m.chat, p.play, 'tiktok.mp4', te, fimg)
+conn.sendFile(m.chat, p.play, 'tiktok.mp4', te, m)
 //m.react('⚠️')
 } catch {
 try {
 const { author: { nickname }, video, description } = await tiktokdl(args[0])
 const url = video.no_watermark2 || video.no_watermark || 'https://tikcdn.net' + video.no_watermark_raw || video.no_watermark_hd
 if (!url) throw '*⚠️ ERROR AL DESACARGAR EL VÍDEO*'
-conn.sendFile(m.chat, url, 'fb.mp4', `• 🧃 *Nombre:* ${nickname}\n• 📄 *Descripción:* ${description}`, fproducto)
+conn.sendFile(m.chat, url, 'fb.mp4', `• 🧃 *Nombre:* ${nickname}\n• 📄 *Descripción:* ${description}`, m)
 m.react(done)
 } catch {
 m.reply(`*⚠️ ERROR AL DESCARGAR EL VÍDEO*`)
