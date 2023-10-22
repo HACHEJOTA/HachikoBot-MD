@@ -6,7 +6,7 @@ var handler = async (m, { conn, text, args, usedPrefix, command}) => {
 if (!args[0]) throw `*⚠️ 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝚄𝙽 𝙻𝙸𝙽𝙺 𝙳𝙴 𝚃𝙸𝙺𝚃𝙾𝙺*\n\n❕ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:\n${usedPrefix + command} https://vm.tiktok.com/ZMYG92bUh/`
 if (!args[0].match(/tiktok/gi)) throw `*⚠️ 𝚅𝙴𝚁𝙸𝙵𝙸𝚀𝚄𝙴 𝚀𝚄𝙴 𝙴𝙻 𝙻𝙸𝙽𝙺 𝚂𝙴𝙰 𝙲𝙾𝚁𝚁𝙴𝚃𝙾*`
 
-m.react(rwait)
+m.react('❗')
 
 const { key } = await conn.sendMessage(m.chat, {text: `${wait}`}, {quoted: m})
 await delay(1000 * 1)
@@ -23,7 +23,7 @@ let te = `𝆺𝅥𝅮 🔥 *𝙽𝙾𝙼𝙱𝚁𝙴:* ${p.nickname}
 𝆺𝅥𝅮 ⏰ *𝙳𝚄𝚁𝙰𝙲𝙸𝙾𝙽:* ${p.duration}
 𝆺𝅥𝅮 📄 *𝙳𝙴𝚂𝙲𝚁𝙸𝙲𝙸𝙾𝙽:* ${p.description}`
 conn.sendFile(m.chat, p.play, 'tiktok.mp4', te, m)
-m.react(done)
+m.react('⚠️')
 } catch {
 try {
 const { author: { nickname }, video, description } = await tiktokdl(args[0])
