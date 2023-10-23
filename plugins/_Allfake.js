@@ -6,15 +6,7 @@ import cheerio from 'cheerio';
 import fetch from 'node-fetch';
 import axios from 'axios';
 import moment from 'moment-timezone';
-//******* 🅒︎🅡︎🅔︎🅓︎🅘︎🅣︎🅞︎🅢︎ *****/
-global.hachejota = '𝙷𝙰𝙲𝙷𝙴𝙹𝙾𝚃𝙰';
-global.hb = 'HΔCHIҜΩβΩT-MD';
-global.wm = '𝙷𝙰𝙲𝙷𝙸𝙺𝙾-𝙱𝙾𝚃-𝙼𝙳';
-global.titulowm2 = `乂  𝐇 𝐀 𝐂 𝐇 𝐈 𝐊 𝐎 - 𝐁 𝐎 𝐓 - 𝐌 𝐃 乂`;
-global.gp1 = 'https://chat.whatsapp.com/LRQdtS7nKt89NBUPWJDjzh';
-global.md = 'https://www.instagram.com/hachejota16';
-global.suittag = ['5214437863111']
-//******=****-*-***=*==================*
+
 global.fgclink = { key: { fromMe: false, participant: "0@s.whatsapp.net", remoteJid: "0@s.whatsapp.net" }, message: { groupInviteMessage: { groupJid: "6285736178354-1625305606@g.us", inviteCode: null, groupName:`${hb}`, caption: hb, jpegThumbnail: imagen4}}};
 
 global.fdocs = { key: { participant : "0@s.whatsapp.net" }, message: { documentMessage: { title: wm, jpegThumbnail: imagen4}}};
