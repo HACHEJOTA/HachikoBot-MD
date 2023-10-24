@@ -1,11 +1,4 @@
-import {watchFile, unwatchFile} from 'fs';
-import chalk from 'chalk';
-import {fileURLToPath} from 'url';
-import fs from 'fs'; 
-import cheerio from 'cheerio';
-import fetch from 'node-fetch';
-import axios from 'axios';
-import moment from 'moment-timezone';
+//m 'moment-timezone';
 
 global.fgclink = { key: { fromMe: false, participant: "0@s.whatsapp.net", remoteJid: "0@s.whatsapp.net" }, message: { groupInviteMessage: { groupJid: "6285736178354-1625305606@g.us", inviteCode: null, groupName:`${hb}`, caption: hb, jpegThumbnail: imagen4}}};
 
@@ -72,7 +65,7 @@ global.nombre = conn.getName(m.sender)
 global.taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 
 //* ************************
-let file = fileURLToPath(import.meta.url);
+/*let file = fileURLToPath(import.meta.url);
 watchFile(file, () => {
   unwatchFile(file);
   console.log(chalk.redBright('Update \'config.js\''));
