@@ -27,7 +27,6 @@ m.reply(msg)
 handler.help = ['google', 'googlef'].map(v => v + ' <pencarian>')
 handler.tags = ['internet']
 handler.command = /^googlef?$/i
-handler.register = true
 
 export default handler
   
