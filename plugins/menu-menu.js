@@ -1,7 +1,8 @@
 import fetch from 'node-fetch';
 const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems}) => {
-  if (usedPrefix == 'a' || usedPrefix == 'A') return;
   try {
+  if (usedPrefix == 'a' || usedPrefix == 'A') return;
+  
 
     const d = new Date(new Date + 3600000);
     const locale = 'es';
