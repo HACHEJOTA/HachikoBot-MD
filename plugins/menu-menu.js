@@ -2,30 +2,16 @@ import fetch from 'node-fetch';
 const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems}) => {
   try {
   if (usedPrefix == 'a' || usedPrefix == 'A') return;
-  
 
-    const d = new Date(new Date + 3600000);
-    const locale = 'es';
-    const week = d.toLocaleDateString(locale, {weekday: 'long'});
-    const date = d.toLocaleDateString(locale, {day: 'numeric', month: 'long', year: 'numeric'});
-    const _uptime = process.uptime() * 1000;
-    const uptime = clockString(_uptime);
-    const user = global.db.data.users[m.sender];
-    const {money, joincount} = global.db.data.users[m.sender];
-    const {exp, limit, level, role} = global.db.data.users[m.sender];
-    const rtotalreg = Object.values(global.db.data.users).filter((user) => user.registered == true).length;
-    const rtotal = Object.entries(global.db.data.users).length || '0'
-    const more = String.fromCharCode(8206);
-    const readMore = more.repeat(850);
-    const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
-    const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
-    const document = doc[Math.floor(Math.random() * doc.length)];
-     const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png');
+  const date = d.toLocaleDateString(locale, {day: 'numeric', month: 'long', year: 'numeric'});
+  const {money, joincount} = global.db.data.users[m.sender];
+  const {exp, limit, level, role} = global.db.data.users[m.sender];
+  const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png');
   const fkon = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': wm, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': imagen1, thumbnail: imagen1 ,sendEphemeral: true}}};
-    await conn.reply(m.chat, '𝙀𝙣 𝙗𝙧𝙚𝙫𝙚 𝙨𝙚 𝙚𝙣𝙫𝙞𝙖𝙧𝙖 𝙚𝙡 𝙢𝙚𝙣𝙪. . .',m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 ᕼOᒪᗩ!!', body: 'sɪɢᴜᴇᴍᴇ ᴇɴ ɪɴsᴛᴀɢʀᴀᴍ', sourceUrl: global.md, thumbnail: await (await fetch(pp)).buffer() }}})
+  await conn.reply(m.chat, '𝙀𝙣 𝙗𝙧𝙚𝙫𝙚 𝙨𝙚 𝙚𝙣𝙫𝙞𝙖𝙧𝙖 𝙚𝙡 𝙢𝙚𝙣𝙪. . .',m, { contextInfo:{ forwardingScore: 2022, isForwarded: true, externalAdReply: {title: '👋 ᕼOᒪᗩ!!', body: 'sɪɢᴜᴇᴍᴇ ᴇɴ ɪɴsᴛᴀɢʀᴀᴍ', sourceUrl: global.md, thumbnail: await (await fetch(pp)).buffer() }}})
 //m.react('🐶');
     await conn.sendMessage(m.chat, { react: { text: '🐶', key: m.key } })
-    let str =`╭───────────────────
+  let txt =`╭───────────────────
 ├⟣❥︎ *𝙾𝚆𝙽𝙴𝚁:* 𝙷𝙰𝙲𝙷𝙴𝙹𝙾𝚃𝙰
 ├───────────────────
 ├⟣❥ *𝙸𝙳𝙸𝙾𝙼𝙰:* 𝙴𝚂𝙿𝙰𝙽̃𝙾𝙻 
@@ -36,7 +22,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ╭───────────────────
 *│⊷〘 𝙱𝙾𝚃 𝙾𝙵𝙲 𝙾 𝚂𝚄𝙱 𝙱𝙾𝚃 〙⊷*
 ├───────────────────
-├⟣✎ ${(conn.user.jid == global.conn.user.jid ? '' : `Jadibot de: https://wa.me/${global.conn.user.jid.split`@`[0]}`) || '*Este es el Bot oficial*'}
+├ *Este es el Bot oficial*
 ╰───────────────────
 ╭───────────────────
 *│⊷〘 𝚂𝙾𝙻𝚄𝙲𝙸𝙾𝙽 𝙰 𝙴𝚁𝚁𝙾𝚁𝙴𝚂  〙⊷*
@@ -56,7 +42,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ├⟣✎ _${usedPrefix}donar_
 ├⟣✎ _${usedPrefix}owner_
 ├⟣✎ _Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
-╰─────────────────────
+╰────────────────────
 
 ╭───────────────────
 *│⊷〘 𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝚁 𝙷𝙰𝙲𝙷𝙸𝙺𝙾 𝙱𝙾𝚃 〙⊷*
@@ -111,6 +97,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ├⟣✎ _${usedPrefix}ytmp4doc *<enlace / link / url>*_
 ├⟣✎ _${usedPrefix}videodoc *<enlace / link / url>*_
 ├⟣✎ _${usedPrefix}dapk2 *<enlace / link / url>*_
+├⟣✎ _${usedPrefix}modapk *<texto>*_
 ├⟣✎ _${usedPrefix}stickerpack *<enlace / link / url>*_
 ├⟣✎ _${usedPrefix}play *<texto>*_
 ├⟣✎ _${usedPrefix}play2 *<texto>*_
@@ -152,8 +139,8 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ├⟣✎ _${usedPrefix}add *<numero>*_
 ├⟣✎ _${usedPrefix}kick *<@tag>*_
 ├⟣✎ _${usedPrefix}kick2 *<@tag>*_
-├⟣✎ _${usedPrefix}listanum *<numero>*_
-├⟣✎ _${usedPrefix}kicknum *<numero>*_
+├⟣✎ _${usedPrefix}listanum *<texto>*_
+├⟣✎ _${usedPrefix}kicknum *<texto>*_
 ├⟣✎ _${usedPrefix}grupo *<abrir / cerrar>*_
 ├⟣✎ _${usedPrefix}grouptime *<opcion> <tiempo>*_
 ├⟣✎ _${usedPrefix}promote *<@tag>*_
@@ -362,31 +349,16 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 *│⊷〘 𝙾𝚆𝙽𝙴𝚁𝚂 〙⊷*
 ├───────────────────
 ├⟣✎ _${usedPrefix}menuowner_
-╰───────────────────`; 
-await conn.sendMessage(m.chat, {
-text: srt,
-contextInfo: {
-externalAdReply: {
-title: '乂 𝙷 𝙰 𝙲 𝙷 𝙸 𝙺 𝙾 - 𝙱 𝙾 𝚃 - 𝙼 𝙳 乂',
-sourceUrl: gp1,  
-thumbnailUrl: [imagen6,imagen1,imagen4,imagen7].getRandom(), 
-mediaType: 1,
-showAdAttribution: true,
-renderLargerThumbnail: true
-}}} , { quoted: fkon });
-    }
+╰───────────────────`;
+   await conn.sendMessage(m.chat, {text: txt.trim(), mentions: [...txt.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [...txt.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": '乂 𝙷 𝙰 𝙲 𝙷 𝙸 𝙺 𝙾 - 𝙱 𝙾 𝚃 - 𝙼 𝙳 乂', "containsAutoReply": true, "mediaType": 1, "thumbnail": [imagen6,imagen1,imagen4].getRandom(), "mediaUrl": global.gp1, "sourceUrl": global.gp1}}}, {quoted: fkon});
+ // m.react('🎮');
   } catch {
-    conn.reply(m.chat, '*[❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝙿𝙾𝚁𝙵𝙰𝚅𝙾𝚁 𝚄𝚂𝙴 𝙴𝙻 .allmenu*', m);
+    conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝙿𝙾𝚁𝙵𝙰𝚅𝙾𝚁 𝚄𝚂𝙴 𝙴𝙻 .allmenu*', m);
   }
 };
-handler.command = /^(menu|menú|memu|memú|help|ayuda|cmd)$/i;
-handler.exp = 50;
-handler.fail = null;
+handler.help = ['menu'];
+handler.tags = ['menu'];
+handler.command = /^(menu|cmd|help|comandos)$/i;
 export default handler;
-function clockString(ms) {
-  const h = isNaN(ms) ? '--' : Math.floor(ms / 3600000);
-  const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
-  const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
-  return [h, m, s].map((v) => v.toString().padStart(2, 0)).join(':');
-      }
-      
+                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                
