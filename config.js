@@ -26,7 +26,7 @@ global.imagen5 = fs.readFileSync('./src/+18.jpg');
 global.imagen6= fs.readFileSync('./Menu3.png');
 global.imagen7= fs.readFileSync('./src/hjbot.jpg');
 global.mods = [];
-
+global.fsizedoc = '999999'
 //* *******Tiempo***************
 global.d = new Date(new Date + 3600000);
 global.locale = 'es';
