@@ -30,7 +30,7 @@ const handler = async (m, {conn, text, participants, isOwner, isAdmin}) => {
       conn.sendMessage(m.chat, {audio: mediax, mentions: users, mimetype: 'audio/mpeg', fileName: `Hidetag.mp3`}, {quoted: m});
     } else if ((isMedia && quoted.mtype === 'stickerMessage') && htextos) {
       var mediax = await quoted.download?.();
-      conn.sendMessage(m.chat, {sticker: mediax, mentions: users}, {quoted: m});
+      conn.sendMessage(m.chat, {sticker: mediax, mentions: users}, {quoted: twa});
     } else {
       await conn.relayMessage(m.chat, {extendedTextMessage: {text: `${masss}\n${htextos}\n`, ...{contextInfo: {mentionedJid: users, externalAdReply: {thumbnail: imagen1, sourceUrl: global.md}}}}}, {});
     }
