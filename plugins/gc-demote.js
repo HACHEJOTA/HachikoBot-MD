@@ -8,7 +8,7 @@ const handler = async (m, {conn, usedPrefix, text}) => {
   }
 
   if (!text && !m.quoted) return conn.reply(m.chat, `*[❗] USO APROPIADO*\n\n*┯┷*\n*┠≽ ${usedPrefix}quitaradmin @tag*\n*┠≽ ${usedPrefix}quitaradmin -> responder a un mensaje*\n*┷┯*`, m);
-  if (number.length > 13 || (number.length < 11 && number.length > 0)) return conn.reply(m.chat, `*[ ⚠️ ] ᴇʟ ɴúᴍᴇʀᴏ ɪɴɢʀᴇsᴀᴅᴏ ᴇs ɪɴᴄᴏʀʀᴇᴄᴛᴏ, ᴘᴏʀ ғᴀᴠᴏʀ ɪɴɢʀᴇsᴇ ᴇʟ ɴúᴍᴇʀᴏ ᴄᴏʀʀᴇᴄᴛᴏ*``, m);
+  if (number.length > 13 || (number.length < 11 && number.length > 0)) return conn.reply(m.chat, `*[ ⚠️ ] ᴇʟ ɴúᴍᴇʀᴏ ɪɴɢʀᴇsᴀᴅᴏ ᴇs ɪɴᴄᴏʀʀᴇᴄᴛᴏ, ᴘᴏʀ ғᴀᴠᴏʀ ɪɴɢʀᴇsᴇ ᴇʟ ɴúᴍᴇʀᴏ ᴄᴏʀʀᴇᴄᴛᴏ*`, m);
 
   try {
     if (text) {
