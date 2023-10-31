@@ -38,7 +38,7 @@ const handler = async (m, {isPrems, conn}) => {
     'participant': '0@s.whatsapp.net',
   };
  await conn.sendMessage(m.chat, {
-text: text,
+text: texto,
 contextInfo: {
 externalAdReply: {
 title: wm,
