@@ -3,7 +3,7 @@ const handler = async (m, {conn, isPrems}) => {
   const pp = 'https://telegra.ph/file/ed38c5ca8c9e07d1f22ec.jpg';
   const time = global.db.data.users[m.sender].lastmiming + 600000;
   if (new Date - global.db.data.users[m.sender].lastmiming < 600000) throw `*[ ⏰ ] 𝙴𝚂𝙿𝙴𝚁𝙰 ${msToTime(time - new Date())} 𝙿𝙰𝚁𝙰 𝚅𝙾𝙻𝚅𝙴𝚁 𝙰 𝙼𝙸𝙽𝙰𝚁*`;
-  const text = `_𝙈𝙞𝙚𝙣𝙩𝙧𝙖𝙨 𝙢𝙞𝙣𝙖𝙗𝙖𝙨 𝙤𝙗𝙩𝙪𝙫𝙞𝙨𝙩𝙚 ${hasil} 𝙭𝙥_`;
+  const text = `𝙈𝙞𝙚𝙣𝙩𝙧𝙖𝙨 𝙢𝙞𝙣𝙖𝙗𝙖𝙨 𝙤𝙗𝙩𝙪𝙫𝙞𝙨𝙩𝙚 ${hasil} 𝙭𝙥`;
   await conn.reply(m.chat,text,m,{ contextInfo:{ externalAdReply: {title: '𝙶𝙴𝙽𝙸𝙰𝙻 𝙲𝙾𝙽𝚃𝙸𝙽𝚄𝙰 𝙼𝙸𝙽𝙰𝙽𝙳𝙾', body: 'sɪɢᴜᴇᴍᴇ ᴇɴ ɪɴsᴛᴀɢʀᴀᴍ', sourceUrl: global.md, thumbnail: imagen7 }}});
   global.db.data.users[m.sender].lastmiming = new Date * 1;
 };
