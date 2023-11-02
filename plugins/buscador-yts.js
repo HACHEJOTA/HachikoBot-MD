@@ -15,9 +15,21 @@ const handler = async (m, {conn, text}) => {
  👁 *_𝚅𝙸𝚂𝚃𝙰𝚂 :_* ${v.views}`;
     }                            
   }).filter((v) => v).join('\n\nꙬꙬꙬꙬꙬꙬꙬꙬꙬꙬ\n\n');
-  conn.sendFile(m.chat, tes[0].thumbnail, 'yts.jpeg', teks, m);
+  conn.sendFile(m.chat, tes[0].thumbna///)thumbnailUrl, 'yts.jpeg', teks, m);
 };
 handler.help = ['ytsearch *<texto>*'];
 handler.tags = ['search'];
 handler.command = ['ytsearch', 'yts'];
 export default handler;
+
+/*await conn.sendMessage(m.chat, {
+text: texto1,
+contextInfo: {
+externalAdReply: {
+title: yt_play[0].title,
+body: wm2,
+thumbnailUrl: yt_play[0].thumbnail, 
+mediaType: 1,
+showAdAttribution: true,
+renderLargerThumbnail: true
+}}} , { quoted: m })
