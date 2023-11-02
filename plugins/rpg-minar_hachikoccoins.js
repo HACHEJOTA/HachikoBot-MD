@@ -42,7 +42,7 @@ contextInfo: {
 externalAdReply: {
 title: wm,
 body: 'sɪɢᴜᴇᴍᴇ ᴇɴ ɪɴsᴛᴀɢʀᴀᴍ',
-sourceUrl: md
+sourceUrl: md,
 thumbnailUrl: pp, 
 mediaType: 1,
 showAdAttribution: true,
