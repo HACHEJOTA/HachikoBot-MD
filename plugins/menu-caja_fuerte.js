@@ -47,11 +47,11 @@ const handler = async (m, {conn, usedPrefix}) => {
 ┣⟣❥  _${usedPrefix}eliminarimg *<texto/comando/palabra clave>*_
 ┣⟣❥  _${usedPrefix}eliminarsticker *<texto/comando/palabra clave>*_`.
 await conn.sendMessage(m.chat, {
-text: captionvid,
+text: srt,
 contextInfo: {
 externalAdReply: {
 title: wm
-body: hachejota,
+body: wm,
 sourceUrl: md,  
 thumbnailUrl: imagen4, 
 mediaType: 1,
