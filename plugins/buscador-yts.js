@@ -16,18 +16,7 @@ const handler = async (m, {conn, text}) => {
     }                            
   }).filter((v) => v).join('\n\nꙬꙬꙬꙬꙬꙬꙬꙬꙬꙬ\n\n');
 
-await conn.sendMessage(m.chat, {
-contextInfo: {
-externalAdReply: {
-title: yt_play[0].title,
-body: titulowm2,
-thumbnailUrl: v.imagen, 
-mediaType: 1,
-showAdAttribution: true,
-renderLargerThumbnail: true
-}}} , { quoted: m })  
-
-//conn.sendFile(m.chat, tes[0].thumbnailUrl, 'yts.jpeg', teks, m);
+conn.sendFile(m.chat, tes[0].thumbnail, 'yts.jpeg', teks, m);
 };
 handler.help = ['ytsearch *<texto>*'];
 handler.tags = ['search'];
