@@ -43,7 +43,7 @@ const handler = async (m, {text, conn, args, usedPrefix, command}) => {
     const fileSizeInMB = fileSizeInKB / 1024;
     const roundedFileSizeInMB = fileSizeInMB.toFixed(2);
    if (fileSizeInMB > 50) {
-    await conn.sendMessage(m.chat, {document: buff, caption: `*▢ Titulo:* ${ttl_1}\n*▢ Peso Del Audio:* ${roundedFileSizeInMB} MB`, fileName: ttl_1 + '.mp3', mimetype: 'audio/mpeg'}, {quoted: m});
+    await conn.sendMessage(m.chat, {document: buff, caption: `*🔰 𝚃𝙸𝚃𝚄𝙻𝙾:* ${ttl_1}\n*`, fileName: ttl_1 + '.mp3', mimetype: 'audio/mpeg'}, {quoted: m});
     await conn.sendMessage(m.chat, {text: `*[ ✔ ] Audio descargado y enviado exitosamente.*\n\n*—◉ Se envío en formato de documento debido a que el audio pesa ${roundedFileSizeInMB} MB y supera el limite establecido por WhatsApp.*\n*◉ Titulo:* ${ttl_1}`, edit: key}, {quoted: m});
     enviando = false
    } else {
