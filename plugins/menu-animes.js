@@ -18,7 +18,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
     const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
     const document = doc[Math.floor(Math.random() * doc.length)];
-    const str = `┏━━━━━━━━━━━━━━━━━━━━┓
+    const txt = `┏━━━━━━━━━━━━━━━━━━━━┓
 ┣⟣☯ 𝙾𝚆𝙽𝙴𝚁: 𝙷𝙰𝙲𝙷𝙴𝙹𝙾𝚃𝙰
 ┣⟣☯ 𝙽𝚄𝙼𝙴𝚁𝙾: +51 992 004 117
 ┣⟣☯ 𝙸𝙳𝙸𝙾𝙼𝙰: 𝙴𝚂𝙿𝙰𝙽̃𝙾𝙻
