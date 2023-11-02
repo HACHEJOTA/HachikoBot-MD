@@ -12,7 +12,7 @@ const handler = async (m, {conn, usedPrefix}) => {
 🦴 ${gp2} 
 `.trim();
   const buttonMessage= {
-    'document': {url: `https://github.com/HACHEJOTA/Hachiko-Bot-MD`},
+    'document': {url: `https://github.com/HACHEJOTA/HachikoBot-MD`},
     'mimetype': `application/${document}`,
     'fileName': `「  𝙷𝚊𝚌𝚑𝚒𝚔𝚘-𝙱𝚘𝚝 」`,
     'fileLength': 99999999999999,
