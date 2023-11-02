@@ -9,7 +9,7 @@ const handler = async (m, {conn, usedPrefix}) => {
 🦴 ${gp1} 
 
 ✪ *𝙲𝙰𝙽𝙰𝙻 𝙳𝙴 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿*
-🦴 ${gp2} 
+🦴 ${canal} 
 `.trim();
   const buttonMessage= {
     'document': {url: `https://github.com/HACHEJOTA/HachikoBot-MD`},
