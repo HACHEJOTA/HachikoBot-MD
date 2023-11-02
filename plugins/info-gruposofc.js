@@ -8,11 +8,11 @@ const handler = async (m, {conn, usedPrefix}) => {
 ✪ *𝙶𝚁𝚄𝙿𝙾 𝙾𝙵𝙲:* 
 🦴 ${gp1} 
 
-✪ *𝙷𝙰𝙲𝙷𝙸𝙺𝙾 𝚄𝙿𝙳𝙰𝚃𝙴𝚂*
-🦴 ${gp2} 
 
 ✪ *𝙲𝙰𝙽𝙰𝙻 𝙾𝙵𝙲 𝙳𝙴 𝙷𝙰𝙲𝙷𝙸𝙺𝙾 𝙱𝙾𝚃* 
-🦴'https://whatsapp.com/channel/0029Va8Z9o55fM5Shk9wuM0p'`.trim();
+🦴 ${gp2} 
+
+`.trim();
   const buttonMessage= {
     'document': {url: `https://github.com/HACHEJOTA/Hachiko-Bot-MD`},
     'mimetype': `application/${document}`,
