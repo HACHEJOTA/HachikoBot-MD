@@ -9,8 +9,9 @@ const handler = async (m, {conn, usedPrefix: prefix, command, text}) => {
 text: response,
 contextInfo: {
 externalAdReply: {
-title: wm,
-body: titulowm2,
+title: data5.name,
+body: 'sɪɢᴜᴇᴍᴇ ᴇɴ ɪɴsᴛᴀɢʀᴀᴍ',
+souceUrl: md,
 thumbnailUrl: data5.icon, 
 mediaType: 1,
 showAdAttribution: true,
