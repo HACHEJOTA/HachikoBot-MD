@@ -41,7 +41,8 @@ text: text,
 contextInfo: {
 externalAdReply: {
 title: wm,
-body: titulowm2,
+body: 'sɪɢᴜᴇᴍᴇ ᴇɴ ɪɴsᴛᴀɢʀᴀᴍ',
+sourceUrl: md
 thumbnailUrl: pp, 
 mediaType: 1,
 showAdAttribution: true,
