@@ -132,7 +132,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ├⟣🕯️ _${usedPrefix}wikipedia *<texto>*_
 ├⟣🕯️ _${usedPrefix}ytsearch *<texto>*_
 ├⟣🕯️ _${usedPrefix}playstore *<texto>*_
-╰─────────────────────
+╰───────────────────
 ╭───────────────────
 *│⊷〘 𝙶𝚁𝚄𝙿𝙾𝚂 𝙰𝙹𝚄𝚂𝚃𝙴𝚂 〙⊷* 
 ├───────────────────
@@ -166,7 +166,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ├⟣🕯️ _${usedPrefix}ruletaban_
 ├⟣🕯️ _${usedPrefix}destraba_
 ├⟣🕯️ _${usedPrefix}setpp *<imagen>*_
-╰─────────────────────
+╰───────────────────
 ╭───────────────────
 *│⊷〘 𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙸𝙳𝙾𝚁𝙴𝚂 〙⊷*
 ├───────────────────
@@ -180,7 +180,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ├⟣🕯️ _${usedPrefix}tourl *<video / imagen / audio>*_
 ├⟣🕯️ _${usedPrefix}tts *<idioma> <texto>*_
 ├⟣🕯️ _${usedPrefix}tts *<efecto> <texto>*_
-╰─────────────────────
+╰───────────────────
 ╭───────────────────
 *│⊷〘 𝙴𝙵𝙴𝙲𝚃𝙾𝚂 𝚈 𝙻𝙾𝙶𝙾𝚂 〙⊷*
 ├───────────────────
@@ -194,7 +194,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ├⟣🕯️ _${usedPrefix}itssostupid_
 ├⟣🕯️ _${usedPrefix}pixelar_
 ├⟣🕯️ _${usedPrefix}blur_
-╰─────────────────────
+╰───────────────────
 ╭───────────────────
 *│⊷〘 𝙵𝚁𝙰𝚂𝙴𝚂 𝚈 𝙲𝙾𝙽𝚂𝙴𝙹𝙾𝚂 〙⊷*
 ├───────────────────
@@ -203,7 +203,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ├⟣🕯️ _${usedPrefix}refran_
 ├⟣🕯️ _${usedPrefix}fraseromantica_
 ├⟣🕯️ _${usedPrefix}historiadeamor_
-╰─────────────────────
+╰───────────────────
 ╭───────────────────
 *│⊷〘 𝙰𝙽𝙸𝙼𝙴𝚂 𝚁𝙰𝙽𝙳𝙾𝙼 〙⊷*
 ├───────────────────
@@ -239,7 +239,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ├⟣🕯️ _${usedPrefix}hacker_
 ├⟣🕯️ _${usedPrefix}planeta_
 ├⟣🕯️ _${usedPrefix}randomprofile_
-╰─────────────────────
+╰───────────────────
 ╭───────────────────
 *│⊷〘 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 +18 〙⊷*
 ├───────────────────
@@ -261,7 +261,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ├⟣🕯️ _${usedPrefix}slow_
 ├⟣🕯️ _${usedPrefix}smooth_
 ├⟣🕯️ _${usedPrefix}tupai_
-╰─────────────────────
+╰───────────────────
 ╭───────────────────
 *│⊷〘 𝙷𝙴𝚁𝚁𝙰𝙼𝙸𝙴𝙽𝚃𝙰𝚂 〙⊷*
 ├───────────────────
@@ -287,7 +287,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ├⟣🕯️ _${usedPrefix}nowa *<numero>*_,
 ├⟣🕯️ _${usedPrefix}horario_
 ├⟣🕯️ _${usedPrefix}dropmail_
-╰─────────────────────
+╰───────────────────
 ╭───────────────────
 *│⊷〘 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚁𝙿𝙶 〙⊷*
 ├───────────────────
@@ -311,7 +311,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ├⟣🕯️ _${usedPrefix}robar *<cantidad> <@tag>*_
 ├⟣🕯️ _${usedPrefix}transfer *<tipo> <cantidad> <@tag>*_
 ├⟣🕯️ _${usedPrefix}unreg *<numero de serie>*_
-╰─────────────────────
+╰───────────────────
 ╭───────────────────
 *│⊷〘 𝚂𝚃𝙸𝙲𝙺𝙴𝚁𝚂 〙⊷*
 ├───────────────────
@@ -344,13 +344,13 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 ├⟣🕯️ _${usedPrefix}stickermarker *<efecto> <imagen>*_
 ├⟣🕯️ _${usedPrefix}stickerfilter *<efecto> <imagen>*_
 ├⟣🕯️ _${usedPrefix}cartoon *<responder a imagen>*_
-╰─────────────────────
+╰───────────────────
 ╭───────────────────
 *│⊷〘 𝙾𝚆𝙽𝙴𝚁𝚂 〙⊷*
 ├───────────────────
 ├⟣🕯️ _${usedPrefix}menuowner_
 ╰───────────────────`;
-   await conn.sendMessage(m.chat, {text: txt.trim(), mentions: [...txt.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [...txt.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": '乂 𝙷 𝙰 𝙲 𝙷 𝙸 𝙺 𝙾 - 𝙱 𝙾 𝚃 - 𝙼 𝙳 乂', "containsAutoReply": true, "mediaType": 1, "thumbnail": [imagen6,imagen1,imagen4].getRandom(), "mediaUrl": global.gp1, "sourceUrl": global.gp1}}}, {quoted: fkon});
+   await conn.sendMessage(m.chat, {text: txt.trim(), mentions: [...txt.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [...txt.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": '乂 𝙷 𝙰 𝙲 𝙷 𝙸 𝙺 𝙾 - 𝙱 𝙾 𝚃 - 𝙼 𝙳 乂', "containsAutoReply": true, "mediaType": 1, "thumbnail": [imagen6,imagen1,imagen4].getRandom(), "mediaUrl": [gp1,canal].getRandom(), "sourceUrl": [gp1,canal].getRandom()}}}, {quoted: fkon});
  // m.react('🎮');
   } catch {
     conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝙿𝙾𝚁𝙵𝙰𝚅𝙾𝚁 𝚄𝚂𝙴 𝙴𝙻 .allmenu*', m);
