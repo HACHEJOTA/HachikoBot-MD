@@ -7,7 +7,7 @@
     let boost = `cd && termux-setup-storage`
     let boost2 = `apt-get update -y && apt-get upgrade -y`
     let boost3 = `pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn `
-    let boost4 = `git clone https://github.com/HACHEJOTA/Hachiko-Bot-MD.git && cd Hachiko-Bot-MD`
+    let boost4 = `git clone https://github.com/HACHEJOTA/HachikoBot-MD.git && cd HachikoBot-MD`
     let boost5 = `yarn install`
     let boost6 = `npm install`
     let boost7 = `npm update`
