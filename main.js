@@ -171,7 +171,7 @@ console.log(chalk.bgBlack(chalk.bold.redBright("Configure el archivo 'config.js'
 process.exit(0)
 }} else {
 while (true) {
-addNumber = await question(chalk.bgBlack(chalk.bold.greenBright('Escriba su número de WhatsApp.\nEjemplo: ++5214437863111\n--> ')))
+addNumber = await question(chalk.bgBlack(chalk.bold.greenBright('Escriba su número de WhatsApp.\nEjemplo: +5214437863111\n--> ')))
 addNumber = addNumber.replace(/[^0-9]/g, '')
 
 if (addNumber.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
@@ -217,13 +217,13 @@ return false
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./sessions")
+let directorio = readdirSync("./HachikoSession")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-')
 })
 prekey = [...prekey, ...filesFolderPreKeys]
 filesFolderPreKeys.forEach(files => {
-unlinkSync(`./sessions/${files}`)
+unlinkSync(`./HachikoSession/${files}`)
 })
 }
 
@@ -246,7 +246,7 @@ console.log(chalk.bold.red(`⚠️ Algo salio mal durante la eliminación, archi
 }}
 
 function purgeOldFiles() {
-const directories = ['./sessions/', './jadibts/']
+const directories = ['./HachikoSession/', './jadibts/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
