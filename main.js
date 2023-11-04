@@ -171,7 +171,7 @@ console.log(chalk.bgBlack(chalk.bold.redBright("Configure el archivo 'config.js'
 process.exit(0)
 }} else {
 while (true) {
-addNumber = await question(chalk.bgBlack(chalk.bold.greenBright('Escriba su número de WhatsApp.\nEjemplo: ++5214437863111\n--> ')))
+addNumber = await question(chalk.bgBlack(chalk.bold.greenBright('Escriba su número de WhatsApp.\nEjemplo: +5214437863111\n--> ')))
 addNumber = addNumber.replace(/[^0-9]/g, '')
 
 if (addNumber.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
