@@ -32,17 +32,16 @@ function start(file) {
   isRunning = true;
   const args = [join(__dirname, file), ...process.argv.slice(2)];
 
-  say('Ajuste la pantalla para escanear el codigo QR', {
+  say('Elije una de las dos opciones', {
     font: 'console',
     align: 'center',
-    gradient: ['red', 'magenta']});
+    gradient: ['red', 'blue']});
 
   setupMaster({
     exec: args[0],
     args: args.slice(1)});
   const p = fork();
   p.on('message', (data) => {
-    console.log('[RECEIVED]', data);
     switch (data) {
       case 'reset':
         p.process.kill();
@@ -56,7 +55,7 @@ function start(file) {
   });
   p.on('exit', (_, code) => {
     isRunning = false;
-    console.error('❎ㅤOcurrio un error inesperado:', code);
+    console.error('❗ㅤOcurrio un error inesperado:', code);
 
     p.process.kill();
     isRunning = false;
