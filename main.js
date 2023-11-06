@@ -13,9 +13,9 @@ import {spawn} from 'child_process';
 import lodash from 'lodash';
 import chalk from 'chalk';
 import syntaxerror from 'syntax-error';
+import readline from 'readline'
 import NodeCache from 'node-cache';
 import {tmpdir} from 'os';
-import readline from 'readline'
 import {format} from 'util';
 import P from 'pino';
 import pino from 'pino';
@@ -170,11 +170,11 @@ let addNumber
 if (!!phoneNumber) {
 addNumber = phoneNumber.replace(/[^0-9]/g, '')
 if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-console.log(chalk.bgBlack(chalk.bold.redBright("Configure el archivo 'config.js' porque su número de WhatsApp no comienza con el código de país, Ejemplo: +593090909090")))
+console.log(chalk.bgBlack(chalk.bold.redBright("Configure el archivo 'config.js' porque su número de WhatsApp no comienza con el código de país, Ejemplo: +521992004117")))
 process.exit(0)
 }} else {
 while (true) {
-addNumber = await question(chalk.bgBlack(chalk.bold.greenBright('Escriba su número de WhatsApp.\nEjemplo: +593090909090\n--> ')))
+addNumber = await question(chalk.bgBlack(chalk.bold.greenBright('Escriba su número de WhatsApp.\nEjemplo: +521992004117\n--> ')))
 addNumber = addNumber.replace(/[^0-9]/g, '')
 
 if (addNumber.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
@@ -195,7 +195,7 @@ rl.close()
 
 conn.isInit = false
 conn.well = false
-conn.logger.info(`🐶 SE CONECTO CON EXITO\n`)
+conn.logger.info(`🐶 E X I T O\n`)
 
 if (!opts['test']) {
 if (global.db) {
@@ -276,7 +276,7 @@ async function connectionUpdate(update) {
   const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode;
   if (code && code !== DisconnectReason.loggedOut && conn?.ws.socket == null) {
     await global.reloadHandler(true).catch(console.error);
-    //console.log(await global.reloadHandler(true).catch(console.error));
+ 
     global.timestamp.connect = new Date;
   }
   if (global.db.data == null) loadDatabase();
