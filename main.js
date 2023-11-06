@@ -15,6 +15,7 @@ import chalk from 'chalk';
 import syntaxerror from 'syntax-error';
 import NodeCache from 'node-cache';
 import {tmpdir} from 'os';
+import readline from 'readline'
 import {format} from 'util';
 import P from 'pino';
 import pino from 'pino';
