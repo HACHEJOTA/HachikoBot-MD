@@ -195,7 +195,7 @@ rl.close()
 
 conn.isInit = false
 conn.well = false
-conn.logger.info(`🔵 H E C H O\n`)
+conn.logger.info(`🐶 SE CONECTO CON EXITO\n`)
 
 if (!opts['test']) {
 if (global.db) {
