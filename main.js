@@ -166,7 +166,7 @@ let addNumber
 if (!!phoneNumber) {
 addNumber = phoneNumber.replace(/[^0-9]/g, '')
 if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-console.log(chalk.bgBlack(chalk.bold.redBright("Configure el archivo 'config.js' porque su número de WhatsApp no comienza con el código de país, Ejemplo: +51992004117")))
+console.log(chalk.bgBlack(chalk.bold.redBright("Configure el archivo 'config.js' porque su número de WhatsApp no comienza con el código de país, Ejemplo: +593090909090")))
 process.exit(0)
 }} else {
 while (true) {
@@ -191,7 +191,7 @@ rl.close()
 
 conn.isInit = false
 conn.well = false
-conn.logger.info(`🐶 E X I T O\n`)
+conn.logger.info(`🔵 H E C H O\n`)
 
 if (!opts['test']) {
 if (global.db) {
@@ -279,7 +279,7 @@ if (opcion == '1') {
 console.log(chalk.yellow('⚠️ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'))
 }}
 if (connection == 'open') {
-console.log(chalk.greenBright('▣──────────────────────────────···\n│\n│✔︎ 𝙲𝙾𝙽𝙴𝙲𝚃𝙰𝙳𝙾 𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙰𝙼𝙴𝙽𝚃𝙴 𝙰𝙻 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 ✅\n│\n▣──────────────────────────────···'))
+console.log(chalk.greenBright('\n╭───────────────────────────◉\n│\n│Conectado correctamente al WhatsApp.\n│\n╰───────────────────────────◉\n'))
 }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode
 if (connection === 'close') {
@@ -336,15 +336,16 @@ conn.ev.off('connection.update', conn.connectionUpdate);
 conn.ev.off('creds.update', conn.credsUpdate)
 }
 
- conn.welcome = '*⊢⊰────⊶ШΣLCΩMΣ⊷────⊱⊣*\n*⊢❥︎ @subject*\n*⊢⊰────⊶⊰≪• ❈ •≫⊱⊷────⊱⊣*\n*⊢❥ @user*\n*⊢❥ 𝙱𝙸𝙴𝙽𝚅𝙴𝙽𝙸𝙳𝙾 𝙰𝙻 𝙶𝚁𝚄𝙿𝙾* \n*⊢ 𝙻𝙴𝙴𝚁 𝙻𝙰 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾*\n*⊢❥ 𝙳𝙸𝚂𝙵𝚁𝚄𝚃𝙰 𝚃𝚄 𝙴𝚂𝚃𝙰𝙳𝙸𝙰!!*\n*⊢⊰────⊶⊰≪• ❈ •≫⊱⊷────⊱⊣*';
-  conn.bye = '*⊢⊰────⊶ΔDIΩS⊷────⊱⊣*\n*⊢❥︎︎ @user*\n*⊢❥︎︎ 𝙷𝙰𝚂𝚃𝙰 𝙿𝚁𝙾𝙽𝚃𝙾 👋🏻* \n*⊢❥︎︎ 𝙽𝙰𝙳𝙸𝙴 𝚃𝙴 𝙴𝚇𝚃𝚁𝙰𝙽̃𝙰𝚁𝙰* \n*⊢⊰────⊶≪ ❈ ≫⊷────⊱⊣*';
-  conn.spromote = '*@user 𝙰𝙷𝙾𝚁𝙰 𝙴𝚁𝙴𝚂 𝙰𝙳𝙼𝙸𝙼 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾 !!*';
-  conn.sdemote = '*@user 𝚈𝙰 𝙽𝙾 𝙴𝚂 𝙰𝙳𝙼𝙸𝙽 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾‼️ !!*';
-  conn.sDesc = '*𝚂𝙴 𝙷𝙰 𝙼𝙾𝙳𝙸𝙵𝙸𝙲𝙰𝙳𝙾 𝙻𝙰 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾*\n\n*𝙽𝚄𝙴𝚅𝙰 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽:* @desc';
-  conn.sSubject = '*𝚂𝙴 𝙷𝙰 𝙼𝙾𝙳𝙸𝙵𝙸𝙲𝙰𝙳𝙾 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾*\n*𝙽𝚄𝙴𝚅𝙾 𝙽𝙾𝙼𝙱𝚁𝙴:* @subject';
-  conn.sIcon = '*𝚂𝙴 𝙷𝙰 𝙲𝙰𝙼𝙱𝙸𝙰𝙳𝙾 𝙻𝙰 𝙵𝙾𝚃𝙾 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾*';
-  conn.sRevoke = '*𝚂𝙴 𝙷𝙰 𝙰𝙲𝚃𝚄𝙰𝙻𝙸𝚉𝙰𝙳𝙾 𝙴𝙻 𝙻𝙸𝙽𝙺 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾*\n*𝙻𝙸𝙽𝙺 𝙽𝚄𝙴𝚅𝙾:* @revoke'; 
-  
+conn.welcome = '*• Hola, Gracias por unirte!!*\n*━━━━━━━━━━━━━━━━━━━*\n\n🍧 *• Nombre:* @user\n🗓️ *• Fecha:* @date\n⏰ *• Hora:* @time\n\n*⚠️  Recuerda leer la descripción*'
+conn.bye = '*• Gracias por haber sido parte del grupo*\n*━━━━━━━━━━━━━━━━━━━━━━━━━*\n\n🍧 *• Nombre:* @user\n🗓️ *• Fecha:* @date\n⏰ *• Hora:* @time'
+conn.spromote = '⚠️ *@user SE SUMA AL GRUPO DE ADMINS*'
+conn.sdemote = '⚠️ *@user ABANDONA EL GRUPO DE ADMINS*'
+conn.sDesc = '⚠️ *SE HA MODIFICADO LA DESCRIPCIÓN*\n\n*NUEVA DESCRIPCIÓN:* @desc'
+conn.sSubject = '⚠️ *SE HA MODIFICADO EL TÍTULO DEL GRUPO*\n*NUEVO TITULO:* @subject'
+conn.sIcon = '⚠️ *SE HA CAMBIADO LA FOTO DEL GRUPO*'
+conn.sRevoke = '⚠️ *SE HA ACTUALIZADO EL ENLACE DEL GRUPO!!*\n*NUEVO ENLACE:* @revoke'
+        
+
 conn.handler = handler.handler.bind(global.conn)
 conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
 conn.groupsUpdate = handler.groupsUpdate.bind(global.conn)
