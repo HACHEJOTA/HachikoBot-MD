@@ -5,6 +5,7 @@ const handler = async (m, {conn, text}) => {
   if (!text) throw '⚠️ *_Que quieres que busque en YouTube?_*';
   const results = await yts(text);
   const tes = results.all;
+const img = await (await fetch(`${tes[0].thumbnail}`)).buffer();
   const teks = results.all.map((v) => {
     switch (v.type) {
       case 'video': return `
