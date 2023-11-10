@@ -16,10 +16,17 @@ const handler = async (m, {conn, text}) => {
     }                            
   }).filter((v) => v).join('\n\nꙬꙬꙬꙬꙬꙬꙬꙬꙬꙬ\n\n');
 
-conn.sendFile(m.chat, tes[0].thumbnail, 'yts.jpeg', teks, m);
-};
-handler.help = ['ytsearch *<texto>*'];
-handler.tags = ['search'];
-handler.command = ['ytsearch', 'yts'];
-export default handler;
-//*
+await conn.sendUrl(m.chat, teks, m, {
+    externalAdReply: {
+       mediaType: 1,
+       renderLargerThumbnail: true,
+       thumbnail: img,
+       thumbnailUrl: img,
+       title: wm,
+    }})
+}
+handler.help = ['ytsearch *<texto>*'] 
+handler.tags = ['search']
+handler.command = ['ytsearch', 'yts'] 
+
+export default handler
