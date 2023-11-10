@@ -17,7 +17,7 @@ const img = await (await fetch(`${tes[0].thumbnail}`)).buffer();
     }                            
   }).filter((v) => v).join('\n\nꙬꙬꙬꙬꙬꙬꙬꙬꙬꙬ\n\n');
 
-await conn.sendUrl(m.chat, teks, m, {
+await conn.sendMessage(m.chat, teks, m, {
     externalAdReply: {
        mediaType: 1,
        renderLargerThumbnail: true,
