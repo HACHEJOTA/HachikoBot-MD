@@ -19,7 +19,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     txt,
     img,
     "• 🥗 Google News •",
-    `${saludo}`,
+    `${hachejota}`,
     md,
     m
   );
