@@ -87,24 +87,7 @@ global.twa = {key: {participant: "0@s.whatsapp.net", remoteJid: "0@s.whatsapp.ne
 
 global.fakemek = {key: {participant: "0@s.whatsapp.net",remoteJid: "0@s.whatsapp.net"}, message: {groupInviteMessage: {groupJid: "51995386439-1616969743@g.us", inviteCode: "m",groupName: "P", caption: 'HachikoBot-MD', jpegThumbnail: null}}}
 
- global.ucapan() = {
-    const time = moment.tz('America/Los_Angeled').format('HH')
-    let res = "Buenas noches 🌙"
-    if (time >= 4) {
-        res = "Buen día 🌄"
-    }
-    if (time > 10) {
-        res = "Buenas tardes ☀️"
-    }
-    if (time >= 15) {
-        res = "Buenas tardes 🌅"
-    }
-    if (time >= 18) {
-        res = "Buenas noches 🌙"
-    }
-    return res
-}
-
+ 
 global.nombre = conn.getName(m.sender)
 global.taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 
