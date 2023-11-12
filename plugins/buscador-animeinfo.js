@@ -25,19 +25,8 @@ const handler = async (m, {conn, text, usedPrefix}) => {
 🌐 • *URL:* ${result.url}
 🎆 • *Background:* ${resultes.text}
 ❄ • *Ringkasan:* ${resultes2.text}`;
-   await conn.sendMessage(m.chat, {
-text: AnimeInfo,
-contextInfo: {
-externalAdReply: {
-title: wm,
-body: titulowm2,
-sourceUrl:d,  
-thumbnailUrl: result.images.jpg.image_url, 
-mediaType: 1,
-showAdAttribution: true,
-renderLargerThumbnail: true
-}}} , { quoted: m }) 
-//conn.sendFile(m.chat, result.images.jpg.image_url, 'error.jpg', AnimeInfo, m);
+   
+conn.sendFile(m.chat, result.images.jpg.image_url, 'error.jpg', AnimeInfo, m);
   } catch {
     throw `*❗ ERROR, INTENTELO DE NUEVO*`;
   }
