@@ -1,4 +1,4 @@
-const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
+Fonts for Android and iPhone  - www.fontskeyboard.com/share-nowconst handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
   const optionsFull =`┏━━━━━━━━━━━━━┓
 ┣⚘ _${usedPrefix}enable *welcome*_
 ┣⚘ _${usedPrefix}disable *welcome*_
@@ -309,7 +309,7 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, {text: optionsFull}, {quoted: m});
       throw false;
   }
-  conn.sendMessage(m.chat, {text: `𝙻𝙰 𝙵𝚄𝙽𝙲𝙸𝙾𝙽 ${type}\n𝚂𝙴 𝙰 ${isEnable ? '𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾' : '𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾'}\n𝙴𝙽 ${isAll ? '𝙴𝚂𝚃𝙴 𝙱𝙾𝚃' : isUser ? '' : '𝙴𝚂𝚃𝙴 𝙲𝙷𝙰𝚃'}`}, {quoted: fliveLoc});
+  conn.sendMessage(m.chat, {text: `*⚡ 𝙻𝙰 𝙵𝚄𝙽𝙲𝙸𝙾𝙽 ${type}\n𝚂𝙴 𝙰 ${isEnable ? '𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾' : '𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾'}\n𝙴𝙽 ${isAll ? '𝙴𝚂𝚃𝙴 𝙱𝙾𝚃' : isUser ? '' : '𝙴𝚂𝚃𝙴 𝙲𝙷𝙰𝚃*'}`}, {quoted: fliveLoc});
 };
 handler.help = ['en', 'dis'].map((v) => v + 'able <option>');
 handler.tags = ['group', 'owner'];
