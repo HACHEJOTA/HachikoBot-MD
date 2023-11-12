@@ -13,7 +13,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 //m.react('🐶');
     await conn.sendMessage(m.chat, { react: { text: '🐶', key: m.key } })
   let txt =`╭───────────────────
-*│Hola ${saludo}*
+*│Hola ${ucapan()}*
 ├───────────────────
 ├⟣❥︎ *𝙾𝚆𝙽𝙴𝚁:* 𝙷𝙰𝙲𝙷𝙴𝙹𝙾𝚃𝙰
 ├⟣❥ *𝙸𝙳𝙸𝙾𝙼𝙰:* 𝙴𝚂𝙿𝙰𝙽̃𝙾𝙻 
@@ -360,5 +360,24 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 };
 handler.command = /^(menu|cmd|help|comandos)$/i;
 export default handler;
+
+function ucapan() {
+    const time = moment.tz('America/Los_Angeled').format('HH')
+    let res = "Buenas noches 🌙"
+    if (time >= 4) {
+        res = "Buen día 🌄"
+    }
+    if (time > 10) {
+        res = "Buenas tardes ☀️"
+    }
+    if (time >= 15) {
+        res = "Buenas tardes 🌅"
+    }
+    if (time >= 18) {
+        res = "Buenas noches 🌙"
+    }
+    return res
+}
+
                                                                                                                                                                                                                                                                 
                                                                                                                                                                                                                                                                 
