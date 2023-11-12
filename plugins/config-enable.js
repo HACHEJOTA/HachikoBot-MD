@@ -1,4 +1,4 @@
-Fonts for Android and iPhone  - www.fontskeyboard.com/share-nowconst handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
+var handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
   const optionsFull =`┏━━━━━━━━━━━━━┓
 ┣⚘ _${usedPrefix}enable *welcome*_
 ┣⚘ _${usedPrefix}disable *welcome*_
