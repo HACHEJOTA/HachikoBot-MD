@@ -1,45 +1,45 @@
 const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
   const optionsFull =`┏━━━━━━━━━━━━━┓
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *welcome*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *welcome*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *public*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *public*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *modohorny*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *modohorny*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *antilink*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *antilink*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *antilink2*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *antilink2*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *detect*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *detect*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *restrict*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *restrict*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *pconly*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *pconly*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *gconly*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *gconly*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *autoread*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *autoread*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *antiviewonce*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *antiviewonce*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *autosticker*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *autosticker*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *anticall*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *anticall*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *antiprivado*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *antiprivado*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *antitoxic*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *antitoxic*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *antitraba*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *antitraba*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *antiarabes*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *antiarabes*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *modejadibot*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *modejadibot*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *modoadmin*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *modoadmin*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *simsimi*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *simsimi*_
+┣⚘ _${usedPrefix}enable *welcome*_
+┣⚘ _${usedPrefix}disable *welcome*_
+┣⚘ _${usedPrefix}enable *public*_
+┣⚘ _${usedPrefix}disable *public*_
+┣⚘ _${usedPrefix}enable *modohorny*_
+┣⚘ _${usedPrefix}disable *modohorny*_
+┣⚘ _${usedPrefix}enable *antilink*_
+┣⚘ _${usedPrefix}disable *antilink*_
+┣⚘ _${usedPrefix}enable *antilink2*_
+┣⚘ _${usedPrefix}disable *antilink2*_
+┣⚘ _${usedPrefix}enable *detect*_
+┣⚘ _${usedPrefix}disable *detect*_
+┣⚘ _${usedPrefix}enable *restrict*_
+┣⚘ _${usedPrefix}disable *restrict*_
+┣⚘ _${usedPrefix}enable *pconly*_
+┣⚘ _${usedPrefix}disable *pconly*_
+┣⚘ _${usedPrefix}enable *gconly*_
+┣⚘ _${usedPrefix}disable *gconly*_
+┣⚘ _${usedPrefix}enable *autoread*_
+┣⚘ _${usedPrefix}disable *autoread*_
+┣⚘ _${usedPrefix}enable *antiviewonce*_
+┣⚘ _${usedPrefix}disable *antiviewonce*_
+┣⚘ _${usedPrefix}enable *autosticker*_
+┣⚘ _${usedPrefix}disable *autosticker*_
+┣⚘ _${usedPrefix}enable *anticall*_
+┣⚘ _${usedPrefix}disable *anticall*_
+┣⚘ _${usedPrefix}enable *antiprivado*_
+┣⚘ _${usedPrefix}disable *antiprivado*_
+┣⚘ _${usedPrefix}enable *antitoxic*_
+┣⚘ _${usedPrefix}disable *antitoxic*_
+┣⚘ _${usedPrefix}enable *antitraba*_
+┣⚘ _${usedPrefix}disable *antitraba*_
+┣⚘ _${usedPrefix}enable *antiarabes*_
+┣⚘ _${usedPrefix}disable *antiarabes*_
+┣⚘ _${usedPrefix}enable *modejadibot*_
+┣⚘ _${usedPrefix}disable *modejadibot*_
+┣⚘ _${usedPrefix}enable *modoadmin*_
+┣⚘ _${usedPrefix}disable *modoadmin*_
+┣⚘ _${usedPrefix}enable *simsimi*_
+┣⚘ _${usedPrefix}disable *simsimi*_
 ┗━━━━━━━━━━━━━┛`.trim();
 
   const isEnable = /true|enable|(turn)?on|1/i.test(command);
@@ -309,7 +309,7 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
       if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, {text: optionsFull}, {quoted: m});
       throw false;
   }
-  conn.sendMessage(m.chat, {text: `📃 𝐎𝐏𝐂𝐈𝐎𝐍: ${type}\n🔮 𝐄𝐒𝐓𝐀𝐃𝐎: ${isEnable ? '𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾' : '𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾'}\n💻 𝐏𝐀𝐑𝐀: ${isAll ? '𝙴𝚂𝚃𝙴 𝙱𝙾𝚃' : isUser ? '' : '𝙴𝚂𝚃𝙴 𝙲𝙷𝙰𝚃'}`}, {quoted: m});
+  conn.sendMessage(m.chat, {text: `𝙻𝙰 𝙵𝚄𝙽𝙲𝙸𝙾𝙽 ${type}\n𝚂𝙴 𝙰 ${isEnable ? '𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾' : '𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾'}\n𝙴𝙽 ${isAll ? '𝙴𝚂𝚃𝙴 𝙱𝙾𝚃' : isUser ? '' : '𝙴𝚂𝚃𝙴 𝙲𝙷𝙰𝚃'}`}, {quoted: fliveLoc});
 };
 handler.help = ['en', 'dis'].map((v) => v + 'able <option>');
 handler.tags = ['group', 'owner'];
