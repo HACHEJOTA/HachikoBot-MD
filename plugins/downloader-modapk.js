@@ -11,7 +11,7 @@ contextInfo: {
 externalAdReply: {
 title: data5.name,
 body: 'sɪɢᴜᴇᴍᴇ ᴇɴ ɪɴsᴛᴀɢʀᴀᴍ',
-souceUrl: md,
+sourceUrl: md,
 thumbnailUrl: data5.icon, 
 mediaType: 1,
 showAdAttribution: true,
