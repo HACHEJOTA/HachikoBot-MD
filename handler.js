@@ -989,8 +989,7 @@ export async function handler(chatUpdate) {
         if (!('antiPrivate' in settings)) settings.antiPrivate = false;
 	if (!('modejadibot' in settings)) settings.modejadibot = true;
         if (!('antispam' in settings)) settings.antispam = false;
-	if (!('audios_bot' in settings)) settings.audios_bot = true
-	if (!('muto' in user)) user.muto = false
+	if (!('audios_bot' in settings)) settings.audios_bot = true;      
       } else {
         global.db.data.settings[this.user.jid] = {
           self: false,
@@ -1001,8 +1000,7 @@ export async function handler(chatUpdate) {
           antiPrivate: false,
 	  modejadibot: true,
           antispam: false,
-	  audios_bot: true,
-	  muto: false
+	  audios_bot: true	
         };
       }
     } catch (e) {
@@ -1266,7 +1264,7 @@ const messageText = `
           m.exp += xp;
         }
         if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-          this.reply(m.chat, `*[❗] 𝚂𝚄𝚂 𝙳𝙸𝙰𝙼𝙰𝙽𝚃𝙴𝚂 𝚂𝙴 𝙷𝙰𝙽 𝙰𝙶𝙾𝚃𝙰𝙳𝙾, 𝙿𝚄𝙴𝙳𝙴 𝙲𝙾𝙼𝙿𝚁𝙰𝚁 𝙼𝙰𝚂 𝚄𝚂𝙰𝙽𝙳𝙾 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 ${usedPrefix}buy <cantidad>*`, m);
+          this.reply(m.chat, `*[❗𝐈𝐍𝐅𝐎 ❗] 𝚂𝚄𝚂 𝙳𝙸𝙰𝙼𝙰𝙽𝚃𝙴𝚂 𝚂𝙴 𝙷𝙰𝙽 𝙰𝙶𝙾𝚃𝙰𝙳𝙾, 𝙿𝚄𝙴𝙳𝙴 𝙲𝙾𝙼𝙿𝚁𝙰𝚁 𝙼𝙰𝚂 𝚄𝚂𝙰𝙽𝙳𝙾 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 ${usedPrefix}buy <cantidad>*`, m);
           continue; // Limit habis
         }
         if (plugin.level > _user.level) {
@@ -1357,12 +1355,15 @@ const messageText = `
     }
     // console.log(global.db.data.users[m.sender])
     let user; const stats = global.db.data.stats;
-    if (m) {
-      if (m.sender && (user = global.db.data.users[m.sender])) {
-        user.exp += m.exp;
-        user.limit -= m.limit * 1;
-      }
-
+    if (m) { let utente = global.db.data.users[m.sender]
+if (utente.muto == true) {
+let bang = m.key.id
+let cancellazzione = m.key.participant
+await conn.sendMessage(m.chat, {
+delete: {
+remoteJid: m.chat, fromMe: false, id: bang, participant: cancellazzione
+}})
+}
       let stat;
       if (m.plugin) {
         const now = +new Date;
@@ -1436,7 +1437,7 @@ text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'We
 (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0]).replace('@date', global.fecha).replace('@time', global.tiempo)
 //let links = linkSity.getRandom()
 
-this.sendMessage(id, { text: text, contextInfo:{ mentionedJid:[user], "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "title": '𝙷𝙰𝙲𝙷𝙸𝙺𝙾-𝙱𝙾𝚃-𝙼𝙳', "body": 'sɪɢᴜᴇᴍᴇ ᴇɴ ɪɴsᴛᴀɢʀᴀᴍ', "previewType": "PHOTO", "thumbnailUrl": ``, "thumbnail": apii.data, "sourceUrl": md}}})
+this.sendMessage(id, { text: text, contextInfo:{ mentionedJid:[user], "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "title": 'ᴡᴇʟᴄᴏᴍᴇ / ʙʏᴇ', "body": `${wm}`, "previewType": "PHOTO", "thumbnailUrl": ``, "thumbnail": apii.data, "sourceUrl": md}}})
       
 }
 }
@@ -1490,7 +1491,7 @@ export async function callUpdate(callUpdate) {
         const callmsg = await this.reply(nk.from, `Hola *@${nk.from.split('@')[0]}*, las ${nk.isVideo ? 'videollamadas' : 'llamadas'} no están permitidas, serás bloqueado.\n-\nSi accidentalmente llamaste póngase en contacto con mi creador para que te desbloquee!`, false, {mentions: [nk.from]});
         // let data = global.owner.filter(([id, isCreator]) => id && isCreator)
         // await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
-        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚👑;;;\nFN:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚 👑\nORG:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚 👑\nTITLE:\nitem1.TEL;waid=51992004117+51 992 004 117\nitem1.X-ABLabel:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐬 👑\nEND:VCARD`;
+        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚👑;;;\nFN:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚 👑\nORG:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚 👑\nTITLE:\nitem1.TEL;waid=51992004117+51 992 004 117\nitem1.X-ABLabel:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭a 👑\nEND:VCARD`;
         await this.sendMessage(nk.from, {contacts: {displayName: '𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚 👑', contacts: [{vcard}]}}, {quoted: callmsg});
         await this.updateBlockStatus(nk.from, 'block');
       }
