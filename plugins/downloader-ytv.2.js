@@ -2,7 +2,7 @@ import {youtubedl, youtubedlv2} from '@bochilteam/scraper';
 import fetch from 'node-fetch';
 const handler = async (m, {conn, args}) => {
   if (!args[0]) throw '*[❗] 𝙸𝙽𝚂𝙴𝚁𝚃𝙴 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙼𝙰𝚂 𝙴𝙻 𝙴𝙽𝙻𝙰𝙲𝙴 / 𝙻𝙸𝙽𝙺 𝙳𝙴 𝚄𝙽 𝚅𝙸𝙳𝙴𝙾 𝙳𝙴 𝚈𝙾𝚄𝚃𝚄𝙱𝙴*';
-  await m.reply(`waitt`,m, { contextInfo:{ externalAdReply: {title: 'DESCARGANDO', body: 'SIGUEME', sourceUrl: global.md, thumbnail: imagen7 }}});
+   await m.reply(`*_⏳ 𝚂𝙴 𝙴𝚂𝚃𝙰 𝙿𝚁𝙾𝙲𝙴𝚂𝙰𝙽𝙳𝙾 𝚂𝚄 𝚅𝙸𝙳𝙴𝙾 𝙴𝚂𝙿𝙴𝚁𝙴..._*`);
   try {
     const qu = args[1] || '360';
     const q = qu + 'p';
