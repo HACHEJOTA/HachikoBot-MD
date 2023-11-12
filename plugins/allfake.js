@@ -87,7 +87,7 @@ global.twa = {key: {participant: "0@s.whatsapp.net", remoteJid: "0@s.whatsapp.ne
 
 global.fakemek = {key: {participant: "0@s.whatsapp.net",remoteJid: "0@s.whatsapp.net"}, message: {groupInviteMessage: {groupJid: "51995386439-1616969743@g.us", inviteCode: "m",groupName: "P", caption: 'HachikoBot-MD', jpegThumbnail: null}}}
 
-var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 0: hour = 'buenas nochess 🌙'; break; case 1: hour = 'buenas noches 💤'; break; case 2: hour = 'buenas noches 🦉'; break; case 3: hour = 'buenas mañanas ✨'; break; case 4: hour = 'buenas mañanas 💫'; break; case 5: hour = 'buenas mañanas 🌅'; break; case 6: hour = 'buenas mañanas 🌄'; break; case 7: hour = 'buenas mañanas 🌅'; break; case 8: hour = 'buenas mañanas 💫'; break; case 9: hour = 'buenas mañanas ✨'; break; case 10: hour = 'buenos dias 🌞'; break; case 11: hour = 'buenos dias 🌨'; break; case 12: hour = 'buenos dias ❄'; break; case 13: hour = 'buenos dias 🌤'; break; case 14: hour = 'buenas tardes 🌇'; break; case 15: hour = 'buenas tardes 🏜️'; break; case 16: hour = 'buenas tardes ☀️'; break; case 17: hour = 'buenas tardes 🌆'; break; case 18: hour = 'buenas noches 🌙'; break; case 19: hour = 'buenas noches 🌃'; break; case 20: hour = 'buenas noches 🌌'; break; case 21: hour = 'buenas noches 🌃'; break; case 22: hour = 'buenas noches 🌙'; break; case 23: hour = 'buenas noches 🌃'; break;}
+    var ase = new Date(); var hour = ase.getHours(); switch(hour){ case 4: hour = 'buenas mañanas 💫'; break;  case 7: hour = 'buenas mañanas 🌅'; break;  case 13: hour = 'buenos dia 🌤'; case 18: hour = 'buenas noches 🌙'; break;}
 global.saludo = "" + hour;
 
 
