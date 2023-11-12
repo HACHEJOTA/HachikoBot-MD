@@ -309,7 +309,7 @@ var handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isRO
       if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, {text: optionsFull}, {quoted: m});
       throw false;
   }
-  conn.sendMessage(m.chat, {text: `*⚡ La funcion ${type}\nse a ${isEnable ? 'activado' : 'desactivado'}\nem ${isAll ? 'este bot' : isUser ? '' : 'este chat*'}`}, {quoted: fliveLoc});
+  conn.sendMessage(m.chat, {text: `⚠️ *La funcion ${type}se a ${isEnable ? 'activado' : 'desactivado'}en ${isAll ? 'este bot' : isUser ? '' : 'este chat'}*`}, {quoted: fliveLoc});
 };
 handler.help = ['en', 'dis'].map((v) => v + 'able <option>');
 handler.tags = ['group', 'owner'];
