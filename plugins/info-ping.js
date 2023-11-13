@@ -20,18 +20,18 @@ let chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats
 let groups = Object.entries(conn.chats).filter(([jid, chat]) => jid.endsWith('@g.us') && chat.isChats && !chat.metadata?.read_only && !chat.metadata?.announce).map(v => v[0])
 
 
-let texto = `*🚀 𝚅 𝙴 𝙻 𝙾 𝙲 𝙸 𝙳 𝙰 𝙳*
+let texto = `*🚀 🅅🄴🄻🄾🄲🄸🄳🄰🄳*
 ❀ ${latensi.toFixed(4)}
 
-*⌛ 𝙰 𝙲 𝚃 𝙸 𝚅 𝙸 𝙳 𝙰 𝙳*
+*⌛ 🄰🄲🅃🄸🅅🄸🄳🄰🄳*
 ❀ ${muptime}
 
-*📱 𝙲 𝙷 𝙰 𝚃 𝚂*
-❀ ${chats.length} *🄲🄷🄰🅃🅂*
-❀ ${groups.length} *🄶🅁🅄🄿🄾🅂*
+*📱 🄲🄷🄰🅃🅂*
+❀ ${chats.length} *𝙲𝙷𝙰𝚃𝚂*
+❀ ${groups.length} *𝙶𝚁𝚄𝙿𝙾𝚂*
 
-*🖥️ 𝚂 𝙴 𝚁 𝚅 𝙸 𝙳 𝙾 𝚁*
- ❀ *🅁🄰🄼:* ${format(totalmem() - freemem())} / ${format(totalmem())}`.trim()
+*🖥️ 🅂🄴🅁🅅🄸🄳🄾🅁*
+ ❀ *𝚁𝙰𝙼:* ${format(totalmem() - freemem())} / ${format(totalmem())}`.trim()
 
 conn.sendMessage(m.chat, { text: texto, contextInfo: { externalAdReply: { title: '', body: '𝗛𝗔𝗖𝗛𝗜𝗞𝗢𝗕𝗢𝗧-𝗠𝗗', thumbnailUrl: 'https://telegra.ph/file/5b73caf5c1579dc477e0a.jpg', sourceUrl: md, mediaType: 1, renderLargerThumbnail: true }}})
 
