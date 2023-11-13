@@ -14,8 +14,9 @@
 "qr": "npm start",
 "code": "node index.js code",
 "test": "node test.js",
-"test2": "nodemon index.js" },
-  },
+"test2": "nodemon index.js"
+ },
+ 
   "homepage": "https://github.com/HACHEJOTA/Hachiko-Bot-MD.",
   "author": {
     "name": "HACHEJOTA"
@@ -95,8 +96,8 @@
     "eslint": "^8.45.0",
     "eslint-config-google": "^0.14.0"
   }
-}
 
+}
 /**{
 "name": "CuriosityBot-MD",
 "version": "1.0.0", 
