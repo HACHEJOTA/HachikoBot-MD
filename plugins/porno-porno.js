@@ -7,4 +7,5 @@ conn.sendMessage(m.chat, { video: { url: json.result }, mimetype: "video/mp4", f
 };
 handler.tags = ["info"];
 handler.command = handler.help = ["hjpajero", "hjporno"];
-handler.premiun = true;
+
+export default handler;
