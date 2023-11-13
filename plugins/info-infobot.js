@@ -76,7 +76,7 @@ const handler = async (m, { conn, usedPrefix }) => {
 };
 handler.help = ["infobot", "speed"];
 handler.tags = ["info", "tools"];
-handler.command = /^(ping|speed|infobot)$/i;
+handler.command = /^(infobot|botinfo)$/i;
 export default handler;
 
 function clockString(ms) {
