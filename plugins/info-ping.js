@@ -33,13 +33,13 @@ let texto = `*🚀 𝚅 𝙴 𝙻 𝙾 𝙲 𝙸 𝙳 𝙰 𝙳*
 *🖥️ 𝚂 𝙴 𝚁 𝚅 𝙸 𝙳 𝙾 𝚁*
  ❀ *𝗥𝗔𝗠:* ${format(totalmem() - freemem())} / ${format(totalmem())}`.trim()
 
-conn.sendMessage(m.chat, { text: texto, contextInfo: { externalAdReply: { title: '', body: '𝗛𝗔𝗖𝗛𝗜𝗞𝗢𝗕𝗢𝗧-𝗠𝗗', thumbnailUrl: 'https://telegra.ph/file/6cbf9148b572711e9b000.jpg', sourceUrl: 'md', mediaType: 1, renderLargerThumbnail: true }}})
+conn.sendMessage(m.chat, { text: texto, contextInfo: { externalAdReply: { title: '', body: '𝗛𝗔𝗖𝗛𝗜𝗞𝗢𝗕𝗢𝗧-𝗠𝗗', thumbnailUrl: 'https://telegra.ph/file/6cbf9148b572711e9b000.jpg', sourceUrl: md, mediaType: 1, renderLargerThumbnail: true }}})
 
 }
 handler.help = ['ping']
 handler.tags = ['info']
 handler.command = ['ping', 'speed']
-handler.register = true
+
 
 export default handler
 
