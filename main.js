@@ -105,7 +105,7 @@ global.chatgpt.chain = lodash.chain(global.chatgpt.data)
 }
 loadChatgptDB()
 
-global.authFile = `HachikoSession`
+global.authFile = `sessions`
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile)
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
@@ -166,7 +166,7 @@ let addNumber
 if (!!phoneNumber) {
 addNumber = phoneNumber.replace(/[^0-9]/g, '')
 if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-console.log(chalk.bgBlack(chalk.bold.redBright("Configure el archivo 'config.js' porque su número de WhatsApp no comienza con el código de país, Ejemplo: +593090909090")))
+console.log(chalk.bgBlack(chalk.bold.redBright("Configure el archivo 'config.js' porque su número de WhatsApp no comienza con el código de país, Ejemplo: +51992004117")))
 process.exit(0)
 }} else {
 while (true) {
@@ -191,7 +191,7 @@ rl.close()
 
 conn.isInit = false
 conn.well = false
-conn.logger.info(`🔵 H E C H O\n`)
+conn.logger.info(`🐶 E X I T O\n`)
 
 if (!opts['test']) {
 if (global.db) {
@@ -216,13 +216,13 @@ return false
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./HachikoSession")
+let directorio = readdirSync("./sessions")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-')
 })
 prekey = [...prekey, ...filesFolderPreKeys]
 filesFolderPreKeys.forEach(files => {
-unlinkSync(`./HachikoSession/${files}`)
+unlinkSync(`./sessions/${files}`)
 })
 }
 
@@ -245,7 +245,7 @@ console.log(chalk.bold.red(`⚠️ Algo salio mal durante la eliminación, archi
 }}
 
 function purgeOldFiles() {
-const directories = ['./HachikoSession/', './jadibts/']
+const directories = ['./sessions/', './jadibts/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
@@ -336,7 +336,7 @@ conn.ev.off('connection.update', conn.connectionUpdate);
 conn.ev.off('creds.update', conn.credsUpdate)
 }
 
-  conn.welcome = '*⊢⊰────⊶ШΣLCΩMΣ⊷────⊱⊣*\n*⊢❥︎ @subject*\n*⊢⊰────⊶⊰≪• ❈ •≫⊱⊷────⊱⊣*\n*⊢❥ @user*\n*⊢❥ 𝙱𝙸𝙴𝙽𝚅𝙴𝙽𝙸𝙳𝙾 𝙰𝙻 𝙶𝚁𝚄𝙿𝙾* \n*⊢ 𝙻𝙴𝙴𝚁 𝙻𝙰 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾*\n*⊢❥ 𝙳𝙸𝚂𝙵𝚁𝚄𝚃𝙰 𝚃𝚄 𝙴𝚂𝚃𝙰𝙳𝙸𝙰!!*\n*⊢⊰────⊶⊰≪• ❈ •≫⊱⊷────⊱⊣*';
+ conn.welcome = '*⊢⊰────⊶ШΣLCΩMΣ⊷────⊱⊣*\n*⊢❥︎ @subject*\n*⊢⊰────⊶⊰≪• ❈ •≫⊱⊷────⊱⊣*\n*⊢❥ @user*\n*⊢❥ 𝙱𝙸𝙴𝙽𝚅𝙴𝙽𝙸𝙳𝙾 𝙰𝙻 𝙶𝚁𝚄𝙿𝙾* \n*⊢ 𝙻𝙴𝙴𝚁 𝙻𝙰 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾*\n*⊢❥ 𝙳𝙸𝚂𝙵𝚁𝚄𝚃𝙰 𝚃𝚄 𝙴𝚂𝚃𝙰𝙳𝙸𝙰!!*\n*⊢⊰────⊶⊰≪• ❈ •≫⊱⊷────⊱⊣*';
   conn.bye = '*⊢⊰────⊶ΔDIΩS⊷────⊱⊣*\n*⊢❥︎︎ @user*\n*⊢❥︎︎ 𝙷𝙰𝚂𝚃𝙰 𝙿𝚁𝙾𝙽𝚃𝙾 👋🏻* \n*⊢❥︎︎ 𝙽𝙰𝙳𝙸𝙴 𝚃𝙴 𝙴𝚇𝚃𝚁𝙰𝙽̃𝙰𝚁𝙰* \n*⊢⊰────⊶≪ ❈ ≫⊷────⊱⊣*';
   conn.spromote = '*@user 𝙰𝙷𝙾𝚁𝙰 𝙴𝚁𝙴𝚂 𝙰𝙳𝙼𝙸𝙼 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾 !!*';
   conn.sdemote = '*@user 𝚈𝙰 𝙽𝙾 𝙴𝚂 𝙰𝙳𝙼𝙸𝙽 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾‼️ !!*';
