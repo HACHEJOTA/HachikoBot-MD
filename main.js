@@ -105,7 +105,7 @@ global.chatgpt.chain = lodash.chain(global.chatgpt.data)
 }
 loadChatgptDB()
 
-global.authFile = `sessions`
+global.authFile = `HachikoSession`
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile)
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
@@ -191,7 +191,7 @@ rl.close()
 
 conn.isInit = false
 conn.well = false
-conn.logger.info(`🐶 E X I T O\n`)
+conn.logger.info(`🐶 E X I T O ⚡\n`)
 
 if (!opts['test']) {
 if (global.db) {
@@ -216,13 +216,13 @@ return false
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./sessions")
+let directorio = readdirSync("./HachikoSession")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-')
 })
 prekey = [...prekey, ...filesFolderPreKeys]
 filesFolderPreKeys.forEach(files => {
-unlinkSync(`./sessions/${files}`)
+unlinkSync(`./HachikoSession/${files}`)
 })
 }
 
@@ -245,7 +245,7 @@ console.log(chalk.bold.red(`⚠️ Algo salio mal durante la eliminación, archi
 }}
 
 function purgeOldFiles() {
-const directories = ['./sessions/', './jadibts/']
+const directories = ['./HachikoSession/', './jadibts/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
@@ -279,7 +279,7 @@ if (opcion == '1') {
 console.log(chalk.yellow('⚠️ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'))
 }}
 if (connection == 'open') {
-console.log(chalk.greenBright('▣──────────────────────────────···\n│\n│✔︎ 𝙲𝙾𝙽𝙴𝙲𝚃𝙰𝙳𝙾 𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙰𝙼𝙴𝙽𝚃𝙴 𝙰𝙻 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 ✅\n│\n▣──────────────────────────────···'))
+console.log(chalk.greenBright('▣──────────────────────────────···\n│\n│☢︎ 𝙲𝙾𝙽𝙴𝙲𝚃𝙰𝙳𝙾 𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙰𝙼𝙴𝙽𝚃𝙴 𝙰𝙻 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿 ✅\n│\n▣──────────────────────────────···'))
 }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode
 if (connection === 'close') {
