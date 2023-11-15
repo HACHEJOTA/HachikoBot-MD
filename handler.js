@@ -955,16 +955,16 @@ export async function handler(chatUpdate) {
         global.db.data.chats[m.chat] = {
           isBanned: false,
           welcome: true,
-          detect: false,
-	  detect2: true,
+          detect: true,
+	  detect2: false,
           sWelcome: '',
           sBye: '',
           sPromote: '',
           sDemote: '',
           antidelete: false,
           modohorny: true,
-          autosticker: true,
-          audios: false,
+          autosticker: false,
+          audios: true,
           antiLink: false,
           antiLink2: false,
           antiviewonce: false,
@@ -977,7 +977,7 @@ export async function handler(chatUpdate) {
 	  simi: false,
           expired: 0,
         };
-      } //aki son todos los enables
+      }
       const settings = global.db.data.settings[this.user.jid];
       if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {};
       if (settings) {
@@ -1264,11 +1264,11 @@ const messageText = `
           m.exp += xp;
         }
         if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-          this.reply(m.chat, `*[❗𝐈𝐍𝐅𝐎 ❗] 𝚂𝚄𝚂 𝙳𝙸𝙰𝙼𝙰𝙽𝚃𝙴𝚂 𝚂𝙴 𝙷𝙰𝙽 𝙰𝙶𝙾𝚃𝙰𝙳𝙾, 𝙿𝚄𝙴𝙳𝙴 𝙲𝙾𝙼𝙿𝚁𝙰𝚁 𝙼𝙰𝚂 𝚄𝚂𝙰𝙽𝙳𝙾 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 ${usedPrefix}buy <cantidad>*`, m);
+          this.reply(m.chat, `*❗ 𝚂𝚄𝚂 𝙳𝙸𝙰𝙼𝙰𝙽𝚃𝙴𝚂 𝚂𝙴 𝙷𝙰𝙽 𝙰𝙶𝙾𝚃𝙰𝙳𝙾, 𝙿𝚄𝙴𝙳𝙴 𝙲𝙾𝙼𝙿𝚁𝙰𝚁 𝙼𝙰𝚂 𝚄𝚂𝙰𝙽𝙳𝙾 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 ${usedPrefix}buy <cantidad>*`, m);
           continue; // Limit habis
         }
         if (plugin.level > _user.level) {
-          this.reply(m.chat, `*❗𝚂𝙴 𝚁𝙴𝚀𝚄𝙸𝙴𝚁𝙴 𝙴𝙻 𝙽𝙸𝚅𝙴𝙻 ${plugin.level} ❗ 𝙿𝙰𝚁𝙰 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾. 𝚃𝚄 𝙽𝙸𝚅𝙴𝙻 𝙴𝚂 ${_user.level}*`, m);
+          this.reply(m.chat, `*❗𝚂𝙴 𝚁𝙴𝚀𝚄𝙸𝙴𝚁𝙴 𝙴𝙻 𝙽𝙸𝚅𝙴𝙻 ${plugin.level}  𝙿𝙰𝚁𝙰 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾. 𝚃𝚄 𝙽𝙸𝚅𝙴𝙻 𝙴𝚂 ${_user.level}*`, m);
           continue; // If the level has not been reached
         }
         const extra = {
@@ -1312,7 +1312,7 @@ const messageText = `
               /* for (const [jid] of global.reportes_solicitudes.filter(([number]) => number)) {
                 const data = (await conn.onWhatsApp(jid))[0] || {};
                 if (data.exists) {
-                  await m.reply(`*[ ⚠️ 𝚁𝙴𝙿𝙾𝚁𝚃𝙴 𝙳𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙲𝙾𝙽 𝙵𝙰𝙻𝙻𝙾𝚂 ⚠️ ]*\n\n*—◉ 𝙿𝙻𝚄𝙶𝙸𝙽:* ${m.plugin}\n*—◉ 𝚄𝚂𝚄𝙰𝚁𝙸𝙾:* ${m.sender}\n*—◉ 𝙲𝙾𝙼𝙰𝙽𝙳𝙾:* ${usedPrefix}${command} ${args.join(' ')}\n\n\`\`\`${text}\`\`\`\n\n*[❗] 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙲𝚁𝙴𝙰𝙳𝙾𝚁 𝙳𝙴𝙻 𝙱𝙾𝚃 𝙿𝙰𝚁𝙰 𝙳𝙰𝚁𝙻𝙴 𝚄𝙽𝙰 𝚂𝙾𝙻𝚄𝙲𝙸𝙾𝙽, 𝙿𝚄𝙴𝙳𝙴 𝚄𝚂𝙰𝚁 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 #reporte*`.trim(), data.jid);
+                  await m.reply(`* ⚠️ 𝚁𝙴𝙿𝙾𝚁𝚃𝙴 𝙳𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙲𝙾𝙽 𝙵𝙰𝙻𝙻𝙾𝚂 ⚠️ *\n\n*—◉ 𝙿𝙻𝚄𝙶𝙸𝙽:* ${m.plugin}\n*—◉ 𝚄𝚂𝚄𝙰𝚁𝙸𝙾:* ${m.sender}\n*—◉ 𝙲𝙾𝙼𝙰𝙽𝙳𝙾:* ${usedPrefix}${command} ${args.join(' ')}\n\n\`\`\`${text}\`\`\`\n\n*[❗] 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙲𝚁𝙴𝙰𝙳𝙾𝚁 𝙳𝙴𝙻 𝙱𝙾𝚃 𝙿𝙰𝚁𝙰 𝙳𝙰𝚁𝙻𝙴 𝚄𝙽𝙰 𝚂𝙾𝙻𝚄𝙲𝙸𝙾𝙽, 𝙿𝚄𝙴𝙳𝙴 𝚄𝚂𝙰𝚁 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 #reporte*`.trim(), data.jid);
                 }
               }*/
               const md5c = fs.readFileSync('./plugins/' + m.plugin);
@@ -1434,7 +1434,7 @@ text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'We
 (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0]).replace('@date', global.fecha).replace('@time', global.tiempo)
 //let links = linkSity.getRandom()
 
-this.sendMessage(id, { text: text, contextInfo:{ mentionedJid:[user], "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "title": 'ᴡᴇʟᴄᴏᴍᴇ / ʙʏᴇ', "body": `${wm}`, "previewType": "PHOTO", "thumbnailUrl": ``, "thumbnail": apii.data, "sourceUrl": md}}})
+this.sendMessage(id, { text: text, contextInfo:{ mentionedJid:[user], "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "title": `${wm}`, "body": `${hachejota}`, "previewType": "PHOTO", "thumbnailUrl": ``, "thumbnail": apii.data, "sourceUrl": md}}})
       
 }
 }
