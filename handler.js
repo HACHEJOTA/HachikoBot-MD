@@ -955,16 +955,16 @@ export async function handler(chatUpdate) {
         global.db.data.chats[m.chat] = {
           isBanned: false,
           welcome: true,
-          detect: true,
-	  detect2: false,
+          detect: false,
+	  detect2: true,
           sWelcome: '',
           sBye: '',
           sPromote: '',
           sDemote: '',
           antidelete: false,
           modohorny: true,
-          autosticker: false,
-          audios: true,
+          autosticker: true,
+          audios: false,
           antiLink: false,
           antiLink2: false,
           antiviewonce: false,
@@ -977,7 +977,7 @@ export async function handler(chatUpdate) {
 	  simi: false,
           expired: 0,
         };
-      }
+      } //aki son todos los enables
       const settings = global.db.data.settings[this.user.jid];
       if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {};
       if (settings) {
@@ -1355,15 +1355,12 @@ const messageText = `
     }
     // console.log(global.db.data.users[m.sender])
     let user; const stats = global.db.data.stats;
-    if (m) { let utente = global.db.data.users[m.sender]
-if (utente.muto == true) {
-let bang = m.key.id
-let cancellazzione = m.key.participant
-await conn.sendMessage(m.chat, {
-delete: {
-remoteJid: m.chat, fromMe: false, id: bang, participant: cancellazzione
-}})
-}
+    if (m) {
+      if (m.sender && (user = global.db.data.users[m.sender])) {
+        user.exp += m.exp;
+        user.limit -= m.limit * 1;
+      }
+
       let stat;
       if (m.plugin) {
         const now = +new Date;
@@ -1491,7 +1488,7 @@ export async function callUpdate(callUpdate) {
         const callmsg = await this.reply(nk.from, `Hola *@${nk.from.split('@')[0]}*, las ${nk.isVideo ? 'videollamadas' : 'llamadas'} no están permitidas, serás bloqueado.\n-\nSi accidentalmente llamaste póngase en contacto con mi creador para que te desbloquee!`, false, {mentions: [nk.from]});
         // let data = global.owner.filter(([id, isCreator]) => id && isCreator)
         // await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
-        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚👑;;;\nFN:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚 👑\nORG:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚 👑\nTITLE:\nitem1.TEL;waid=51992004117+51 992 004 117\nitem1.X-ABLabel:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭a 👑\nEND:VCARD`;
+        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚👑;;;\nFN:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚 👑\nORG:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚 👑\nTITLE:\nitem1.TEL;waid=51992004117+51 992 004 117\nitem1.X-ABLabel:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐬 👑\nEND:VCARD`;
         await this.sendMessage(nk.from, {contacts: {displayName: '𝐇𝐚𝐜𝐡𝐞 𝐉𝐨𝐭𝐚 👑', contacts: [{vcard}]}}, {quoted: callmsg});
         await this.updateBlockStatus(nk.from, 'block');
       }
