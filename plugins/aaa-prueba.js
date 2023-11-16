@@ -4,8 +4,8 @@ import fs from 'fs';
 const exec = promisify(_exec).bind(cp);
 const handler = async (m, {conn, isROwner, usedPrefix, command, text}) => {
   const ar = Object.keys(plugins);
-  const ar1 = ar.map((v , i) => 
-const tlp = `ar1.map(v => `├❥ᰰຼ ${v}``
+  const ar1 = ar.map((v) => 
+const tlp = `ar1.map((v) => ' ' + v).join`\n*➻*``
 conn.reply(m.chat,`${tlp}`,m)
 }
 
