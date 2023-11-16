@@ -1,10 +1,10 @@
 /* Creado por https://github.com/FG98F */
 
 const handler = async (m, {conn}) => {
-  await conn.fetchBlocklist().then(async (data, n) => {
+  await conn.fetchBlocklist().then(async (data, i) => {
     let txt = `*≡  𝙻𝙸𝚂𝚃𝙰 𝙳𝙴 𝙱𝙻𝙾𝚀𝚄𝙴𝙰𝙳𝙾𝚂*\n\n*𝚃𝙾𝚃𝙰𝙻 :* ${data.length}\n\n┌─⊷\n`;
     for (const i of data) {
-      txt += `${n + 1}︎︎@${i.split('@')[0]}\n`;
+      txt += `${i + 1}︎︎   @${i.split('@')[0]}\n`;
     }
     txt += '└───────────';
     return conn.reply(m.chat, txt, m, {mentions: await conn.parseMention(txt)});
