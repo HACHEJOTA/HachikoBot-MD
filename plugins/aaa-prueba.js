@@ -5,7 +5,7 @@ const exec = promisify(_exec).bind(cp);
 const handler = async (m, {conn, isROwner, usedPrefix, command, text}) => {
   const ar = Object.keys(plugins);
   const ar1 = ar.map((v , i) => v.replace('.js', '')) 
-let totalp = ar1.map(v => ` ${i + 1} ${v}`).join('\n')
+const totalp = `${ar1.map(v => ` ${i + 1} ${v}`).join('\n')}`
 await conn.reply(m.chat,`${totalp}`,m)
 }
 
