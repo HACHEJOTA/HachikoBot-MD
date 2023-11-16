@@ -5,8 +5,8 @@ const exec = promisify(_exec).bind(cp);
 const handler = async (m, {conn, isROwner, usedPrefix, command, text}) => {
   const ar = Object.keys(plugins);
   const ar1 = ar.map((v, i) => v.replace('.js', ''));
-  if (!ar1.includes(text)) return m.reply(`*𝙻𝙸𝚂𝚃𝙰 𝙳𝙴 𝙿𝙻𝚄𝙶𝙸𝙽𝚂 (𝙰𝚁𝙲𝙷𝙸𝚅𝙾𝚂) 𝙴𝚇𝙸𝚂𝚃𝙴𝙽𝚃𝙴𝚂:*\n*➵* 
-${ar1.map(v => `├❥ᰰຼ ${v}`).join('\n')}`)  let o;
+   if (!ar1.includes(text)) return m.reply(`* 𝙻𝙸𝚂𝚃𝙰 𝙳𝙴 𝙿𝙻𝚄𝙶𝙸𝙽𝚂 (𝙰𝚁𝙲𝙷𝙸𝚅𝙾𝚂) 𝙴𝚇𝙸𝚂𝚃𝙴𝙽𝚃𝙴𝚂:*\n ${ar1.map((v,i) => 'c' + v).join}`);
+ let o;
   try {
     o = await exec('cat plugins/' + text + '.js');
   } catch (e) {
