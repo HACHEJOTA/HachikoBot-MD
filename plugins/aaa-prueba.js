@@ -4,9 +4,9 @@ import fs from 'fs';
 const exec = promisify(_exec).bind(cp);
 const handler = async (m, {conn, isROwner, usedPrefix, command, text}) => {
   const ar = Object.keys(plugins);
-  const ar1 = ar.map((v , i) => v.replace('.js', '')) 
-const totalp = `${ar1.map(v => ` ${i + 1} ${v}`).join('\n')}`
-await conn.reply(m.chat,`${totalp}`,m)
+  const ar1 = ar.map((v , i) => 
+
+conn.reply(m.chat,`${ar1}`,m)
 }
 
 handler.tags = ['owner'];
